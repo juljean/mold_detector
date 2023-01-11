@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Trichophyton</folder>
+	<filename>7_trichophyton_equinum.jpg</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Trichophyton\7_trichophyton_equinum.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Trichophyton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>288</xmin>
+			<ymin>343</ymin>
+			<xmax>490</xmax>
+			<ymax>478</ymax>
+		</bndbox>
+	</object>
+</annotation>

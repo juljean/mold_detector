@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Penicillium</folder>
+	<filename>20_penicillium_x.png</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Penicillium\20_penicillium_x.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>828</width>
+		<height>820</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Penicillium</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>287</xmin>
+			<ymin>280</ymin>
+			<xmax>558</xmax>
+			<ymax>575</ymax>
+		</bndbox>
+	</object>
+</annotation>

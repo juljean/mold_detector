@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Aspergillus</folder>
+	<filename>6_aspergillus_niger .jpg</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Aspergillus\6_aspergillus_niger .jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>900</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Aspergillus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>484</xmin>
+			<ymin>369</ymin>
+			<xmax>692</xmax>
+			<ymax>574</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Alternaria</folder>
+	<filename>1_alternaria_alternata.png</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Alternaria\1_alternaria_alternata.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>502</width>
+		<height>509</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Alternaria</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>119</xmin>
+			<ymin>117</ymin>
+			<xmax>368</xmax>
+			<ymax>381</ymax>
+		</bndbox>
+	</object>
+</annotation>

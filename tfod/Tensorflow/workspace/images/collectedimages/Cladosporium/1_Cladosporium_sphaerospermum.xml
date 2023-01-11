@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Cladosporium</folder>
+	<filename>1_Cladosporium_sphaerospermum.jpg</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Cladosporium\1_Cladosporium_sphaerospermum.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>826</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Cladosporium</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>316</xmin>
+			<ymin>262</ymin>
+			<xmax>695</xmax>
+			<ymax>594</ymax>
+		</bndbox>
+	</object>
+</annotation>

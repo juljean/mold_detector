@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Mucor</folder>
+	<filename>20_mucor_x.jpg</filename>
+	<path>C:\Users\nadyu\PycharmProjects\mold_detector\tfod\Tensorflow\workspace\images\collectedimages\Mucor\20_mucor_x.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>758</width>
+		<height>708</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Mucor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>370</xmin>
+			<ymin>412</ymin>
+			<xmax>480</xmax>
+			<ymax>692</ymax>
+		</bndbox>
+	</object>
+</annotation>
