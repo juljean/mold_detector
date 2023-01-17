@@ -1,0 +1,232 @@
+
+ScreenManager:
+    MenuScreen:
+    CameraClick:
+    Glossary:
+    ClickScreen:
+    ChooseScreen:
+<ChooseScreen>:
+    text_1: text_1
+    canvas.before:
+        Color:
+            rgba:(240/255,240/255,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        padding: 10
+        orientation: 'vertical'
+        Label:
+            valign: 'middle'
+            height: self.texture_size[1]
+            text_size: self.width, None
+            font_size: (root.width**2 + root.height**2) / 14**4
+            padding: 1,1
+            text: "         "
+            color: 0.3,0.3,0.3,1 
+        BoxLayout:
+            size_hint: 1, 0.4
+            padding: 10
+            orientation: 'horizontal'
+            Label:
+                height: self.texture_size[1]
+                text_size: self.width, None
+                font_size: (root.width**2 + root.height**2) / 14**4
+                padding: 1,1
+                text: "Enter the name of the file:"
+                color: 0.3,0.3,0.3,1 
+
+            TextInput:
+                height: '70dp'
+                font_size: (root.width**2 + root.height**2) / 15**4
+                multiline: False
+                pos_hint:{"x":0.5,"y":0.45}
+                size_hint: 1, 0.9
+                id: text_1
+
+
+        Button:
+            pos_hint:{"x":0.6,"y":0.2}
+            size_hint: 0.3, 0.15
+            size_hint_y: None
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            #height: '60dp'
+            on_release:
+                root.submit()
+                root.manager.current = "ClickScreen"
+        Label:
+            height: self.texture_size[1]
+            text_size: self.width, None
+            font_size: (root.width**2 + root.height**2) / 14**4
+            padding: 1,1
+            text: "OR"
+            color: 0.3,0.3,0.3,1 
+        Button:
+            # pos_hint:{"x":0.2,"y":0.05}
+            # size_hint: 0.6, 0.15
+            size_hint_y: None
+            text: "take a picture with camera"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            #height: '60dp'
+            on_release:
+                root.submit()
+                root.manager.current = "camera"
+
+        Button:
+            text: 'Back to menu'
+            size_hint_y: None
+            height: '52dp'
+            on_press: root.manager.current = "menu"
+
+
+<ClickScreen>:
+    canvas.before:
+        Color:
+            rgba:(240/255,240/255,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    FloatLayout: 
+
+
+        # Adding image from the system
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            Label:
+                id: text_input
+                size_hint_y: 1.6
+                height: self.texture_size[1]
+                text_size: self.width, None
+                padding: 10, 10
+                text: "Processing... "
+                color: 0.3,0.3,0.3,1 
+        Label:
+            text: "     "
+            color: (0,0,0,1) 
+            pos_hint: {"x":0.2, "top":1.3}
+            canvas.before:
+                Color:
+                    rgba: (240/255,240/255,1,1)
+                Rectangle:
+                    pos: 0, 370
+                    size: self.width, self.height/2.5
+
+        Image:
+            id: image
+            source: 'loading.gif'
+            allow_stretch: True
+            keep_ratio: True
+            # Giving the size of image
+            size_hint_x: 0.4
+            size_hint_y: 0.4
+            pos_hint: {"x":0.3, "top":1}
+            # allow stretching of image
+            
+            height: '200dp'
+        Button:
+            text: 'Recognize mold'
+            pos_hint: {"top":0.17}
+            size_hint_y: None
+            height: '52dp'
+            on_press: root.update()
+        Button:
+            text: 'Back to menu'
+            size_hint_y: None
+            height: '52dp'
+            on_press: 
+                root.back()
+                root.manager.current = "menu"
+
+
+
+<Glossary>:
+    canvas.before:
+        Color:
+            rgba:(240/255,240/255,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+
+        orientation: 'vertical'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            Label:
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                padding: 10, 10
+                text: root.text
+                color: 0.3,0.3,0.3,1 
+        Button:
+            text: 'Back to menu'
+            size_hint_y: None
+            height: '52dp'
+            on_press: root.manager.current = "menu"
+<MenuScreen>:
+    canvas.before:
+        Color:
+            rgba:(240/255,240/255,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    FloatLayout:
+
+        Label:
+            text:"MOLD RECOGNIZER"
+            font_size: (root.width**2 + root.height**2) / 11.5**4
+            pos_hint: {"x":0.31, "top":0.8}
+            size_hint: 0.35, 0.15
+            color: 0.3,0.3,0.3,1
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.2
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Recognize your type of mold"
+            on_press: root.manager.current = "Screen"
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Glossary of mold"
+            on_press: root.manager.current = "Glossary"
+
+
+
+
+
+<CameraClick>:
+    BoxLayout:
+        orientation: 'vertical'
+        Camera:
+            id: camera
+            resolution: (640, 480)
+            play: False
+        ToggleButton:
+            text: 'Play'
+            on_press: camera.play = not camera.play
+            size_hint_y: None
+            height: '48dp'
+        Button:
+            text: 'Capture'
+            size_hint_y: None
+            height: '48dp'
+            on_press: root.capture()
+            on_release: root.manager.current = "ClickScreen"
+        Button:
+            text: 'Back to menu'
+            size_hint_y: None
+            height: '52dp'
+            on_press: root.manager.current = "menu"
+
+
